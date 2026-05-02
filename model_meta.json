@@ -1,0 +1,232 @@
+{
+  "feature_cols": [
+    "Gender",
+    "Married",
+    "Education",
+    "Self_Employed",
+    "Property_Area",
+    "Dependents",
+    "ApplicantIncome",
+    "CoapplicantIncome",
+    "LoanAmount",
+    "Loan_Amount_Term",
+    "Credit_History",
+    "Total_Income",
+    "Log_Total_Income",
+    "EMI",
+    "Debt_Income_Ratio",
+    "Income_Per_Dependent",
+    "Loan_Income_Ratio"
+  ],
+  "categorical_cols": [
+    "Gender",
+    "Married",
+    "Education",
+    "Self_Employed",
+    "Property_Area"
+  ],
+  "numeric_cols": [
+    "Dependents",
+    "ApplicantIncome",
+    "CoapplicantIncome",
+    "LoanAmount",
+    "Loan_Amount_Term",
+    "Credit_History",
+    "Total_Income",
+    "Log_Total_Income",
+    "EMI",
+    "Debt_Income_Ratio",
+    "Income_Per_Dependent",
+    "Loan_Income_Ratio"
+  ],
+  "models": {
+    "gradient_boosting": {
+      "accuracy": 0.8701,
+      "auc": 0.8231,
+      "f1": 0.9138,
+      "cv_auc_mean": 0.7883,
+      "cv_auc_std": 0.0819
+    },
+    "random_forest": {
+      "accuracy": 0.8571,
+      "auc": 0.795,
+      "f1": 0.906,
+      "cv_auc_mean": 0.7674,
+      "cv_auc_std": 0.113
+    },
+    "logistic_regression": {
+      "accuracy": 0.8312,
+      "auc": 0.819,
+      "f1": 0.885,
+      "cv_auc_mean": 0.7321,
+      "cv_auc_std": 0.0851
+    },
+    "knn_classifier": {
+      "accuracy": 0.7403,
+      "auc": 0.6868,
+      "f1": 0.8413,
+      "cv_auc_mean": 0.6197,
+      "cv_auc_std": 0.0544
+    }
+  },
+  "feature_dependency": {
+    "Credit_History": {
+      "drops": {
+        "gradient_boosting": 0.214,
+        "random_forest": 0.1599,
+        "logistic_regression": 0.1388,
+        "knn_classifier": 0.0905
+      },
+      "avg_drop": 0.1508
+    },
+    "Property_Area": {
+      "drops": {
+        "gradient_boosting": 0.0413,
+        "random_forest": -0.0009,
+        "logistic_regression": 0.0661,
+        "knn_classifier": 0.012
+      },
+      "avg_drop": 0.0296
+    },
+    "Self_Employed": {
+      "drops": {
+        "gradient_boosting": 0.0248,
+        "random_forest": 0.0223,
+        "logistic_regression": 0.0099,
+        "knn_classifier": 0.019
+      },
+      "avg_drop": 0.019
+    },
+    "Dependents": {
+      "drops": {
+        "gradient_boosting": 0.0256,
+        "random_forest": 0.0037,
+        "logistic_regression": -0.0066,
+        "knn_classifier": 0.0186
+      },
+      "avg_drop": 0.0103
+    },
+    "Education": {
+      "drops": {
+        "gradient_boosting": 0.0152,
+        "random_forest": 0.0111,
+        "logistic_regression": -0.0017,
+        "knn_classifier": 0.0042
+      },
+      "avg_drop": 0.0072
+    },
+    "CoapplicantIncome": {
+      "drops": {
+        "gradient_boosting": 0.0186,
+        "random_forest": 0.0066,
+        "logistic_regression": 0.0008,
+        "knn_classifier": -0.007
+      },
+      "avg_drop": 0.0048
+    },
+    "Loan_Income_Ratio": {
+      "drops": {
+        "gradient_boosting": 0.0471,
+        "random_forest": -0.0232,
+        "logistic_regression": -0.0025,
+        "knn_classifier": -0.0136
+      },
+      "avg_drop": 0.002
+    },
+    "LoanAmount": {
+      "drops": {
+        "gradient_boosting": 0.0297,
+        "random_forest": -0.01,
+        "logistic_regression": -0.0124,
+        "knn_classifier": -0.0012
+      },
+      "avg_drop": 0.0015
+    },
+    "EMI": {
+      "drops": {
+        "gradient_boosting": 0.0107,
+        "random_forest": -0.0211,
+        "logistic_regression": 0.0132,
+        "knn_classifier": 0.0021
+      },
+      "avg_drop": 0.0012
+    },
+    "Married": {
+      "drops": {
+        "gradient_boosting": 0.0082,
+        "random_forest": -0.0033,
+        "logistic_regression": 0.0041,
+        "knn_classifier": -0.0107
+      },
+      "avg_drop": -0.0004
+    },
+    "Total_Income": {
+      "drops": {
+        "gradient_boosting": 0.0223,
+        "random_forest": -0.0215,
+        "logistic_regression": -0.0008,
+        "knn_classifier": -0.0025
+      },
+      "avg_drop": -0.0006
+    },
+    "Log_Total_Income": {
+      "drops": {
+        "gradient_boosting": 0.0223,
+        "random_forest": -0.0215,
+        "logistic_regression": -0.0083,
+        "knn_classifier": 0.0
+      },
+      "avg_drop": -0.0019
+    },
+    "Income_Per_Dependent": {
+      "drops": {
+        "gradient_boosting": 0.021,
+        "random_forest": -0.0219,
+        "logistic_regression": -0.0149,
+        "knn_classifier": 0.0042
+      },
+      "avg_drop": -0.0029
+    },
+    "Debt_Income_Ratio": {
+      "drops": {
+        "gradient_boosting": -0.0166,
+        "random_forest": 0.0033,
+        "logistic_regression": 0.0173,
+        "knn_classifier": -0.0161
+      },
+      "avg_drop": -0.003
+    },
+    "ApplicantIncome": {
+      "drops": {
+        "gradient_boosting": 0.0136,
+        "random_forest": -0.024,
+        "logistic_regression": -0.0025,
+        "knn_classifier": -0.0004
+      },
+      "avg_drop": -0.0033
+    },
+    "Gender": {
+      "drops": {
+        "gradient_boosting": 0.0099,
+        "random_forest": 0.0111,
+        "logistic_regression": -0.0099,
+        "knn_classifier": -0.0264
+      },
+      "avg_drop": -0.0038
+    },
+    "Loan_Amount_Term": {
+      "drops": {
+        "gradient_boosting": 0.0074,
+        "random_forest": 0.0033,
+        "logistic_regression": 0.0025,
+        "knn_classifier": -0.0711
+      },
+      "avg_drop": -0.0145
+    }
+  },
+  "dataset_file": "loan_data.csv",
+  "dataset_source": "Loan Prediction Dataset \u2014 Banking",
+  "train_samples": 304,
+  "test_samples": 77,
+  "total_features": 17
+}
